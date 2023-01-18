@@ -44,6 +44,7 @@ public class Frag1 extends Fragment {
         apiService = retrofit.create(MyApiTranslationInterface.class);
 
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        historyList = sharedPref.getString("honza", "No translation yet!");
 
         binding = Frag1LayoutBinding.inflate(inflater, container, false);
 
@@ -80,11 +81,11 @@ public class Frag1 extends Fragment {
                 ApiResponse data = response.body();
                 //ResponseData responseData = data.responseData;
 
-                historyList += q +" -> " + data.responseData.translatedText + "\n";
+                historyList += q + " -> " + data.responseData.translatedText + "\n";
 
                 SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putString("honza",historyList);
+                editor.putString("honza", historyList);
                 editor.apply();
 
                 Log.v("MYAPP", data.responseData.translatedText);
