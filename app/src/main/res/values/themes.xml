@@ -22,4 +22,10 @@
     <style name="Theme.MyAplication3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MyAplication3.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_launcher_foreground</item>
+        <item name="android:statusBarColor" >?attr/colorOnPrimary</item>
+    </style>
+
 </resources>
