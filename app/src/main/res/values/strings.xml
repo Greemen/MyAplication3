@@ -8,5 +8,7 @@
     <string name="tab1">What do you want to translate?</string>
     <string name="tab2">History</string>
     <string name="tab3">Jokes here for you:</string>
-    <string name="saved_history_key">honza</string>
+
+
+    <string name="history_key">MyFunHistory_key</string>
 </resources>

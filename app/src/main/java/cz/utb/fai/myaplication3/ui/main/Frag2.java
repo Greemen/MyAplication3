@@ -29,7 +29,7 @@ public class Frag2 extends Fragment {
         if (isVisibleToUser) {
 
             SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-            String translated = sharedPref.getString("honza", "No translation yet!");
+            String translated = sharedPref.getString("@string/history_key", "No translation yet!");
 
             Log.v("FRAG2", translated);
 
